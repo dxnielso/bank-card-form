@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- displays site properly based on user's device -->
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+	<link rel="stylesheet" href="styles.css" />
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+	<script src="index.js" defer></script>
+
+	<title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="box-1">
+			<div class="container-cards">
+				<div class="card-front">
+					<div>
+						<div class="card-front__big-circle"></div>
+						<div class="card-front__small-circle"></div>
+					</div>
+					<div>
+						<h2 id="target-number">0000 0000 0000 0000</h2>
+						<div>
+							<span id="target-name">Jane Applessed</span>
+							<span id="target-date">00/00</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-back">
+					<span id="target-cvc">000</span>
+				</div>
+			</div>
+		</div>
+		<div class="box-2">
+			<form autocomplete="off" id="form-card">
+				<div class="form-box">
+					<label for="name">CARDHOLDER NAME</label>
+					<input type="text" name="name" id="name" placeholder="e.g Jane Applessed" class="input" maxlength="50"/>
+					<span class="error error-oculto" id="error-name">Lorem ipsum dolor sit amet.</span>
+				</div>
+				<div class="form-box">
+					<label for="number">CARD NUMBER</label>
+					<input type="number" name="number" id="number" placeholder="e.g 1234 5678 9123 0000" class="input" />
+					<span class="error error-oculto" id="error-number">Lorem ipsum dolor sit amet.</span>
+				</div>
+				<div class="form-box form-box--flex">
+					<div class="form-date">
+						<label for="month">EXP. DATE (MM/YY)</label>
+						<div>
+							<div>	
+								<input type="number" name="month" id="month" placeholder="MM" min="1" max="12" />
+								<span class="error error-oculto" id="error-month">Lorem ipsum dolor</span>
+							</div>
+							<div>
+								<input type="number" name="year" id="year" placeholder="YY" min="22" max="50" />
+								<span class="error error-oculto" id="error-year">Lorem ipsum dolor</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-cvc">
+						<label for="cvc">CVC</label>
+						<input type="number" name="cvc" id="cvc" placeholder="e.g 123" min="100" max="9999" />
+						<span class="error error-oculto" id="error-cvc">Lorem ipsum dolor</span>
+					</div>
+				</div>
+				<button class="button-confirm">Confirm</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Daniel Solis</a>.
+    </div> -->
+</body>
+
+</html>
